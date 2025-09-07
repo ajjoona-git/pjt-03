@@ -20,6 +20,15 @@
       src: url("assets/fonts/GmarketSansTTFMedium.ttf") format("ttf");
     }
 
+    .font-logo {
+      font-family: "GmarketSansTTFMedium";
+      font-weight: bold;
+    }
+
+    .font-menu {
+      font-family: "SBAggro_L";
+    }
+
     body {
       margin: 0;
       padding: 0;
@@ -27,22 +36,50 @@
       font-family: "Helvetica Neue", Arial, sans-serif;
     }
 
+    .bestseller {
+      padding: 3rem;
+    }
+
     .bestseller-container {
       display: flex;
       flex-direction: row;
+      flex-wrap: wrap;
       justify-content: space-between;
     }
-    
+
     .bestseller-img {
       display: block;
       width: 150px;
       height: 220px;
     }
 
+    .bestseller-item {
+      display: flex;
+      flex-direction: column;
+      margin: 0 1rem;
+    }
+
+    .bestseller-title {
+      font-family: "SBAggro_L";
+      text-align: center;
+      padding-top: 0.5rem;
+      color: #808080;
+    }
+
     .slide {
       display: flex;
       flex-direction: row;
+      flex-wrap: wrap;
       justify-content: space-evenly;
+      flex-grow: 1;
+    }
+
+    .d-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-grow: 1;
+      padding-bottom: 3rem;
     }
 
     .section-title {
@@ -56,10 +93,10 @@
 
 <body>
   <!-- 베스트셀러 섹션 -->
-  <section class="bestseller py-5">
+  <section class="bestseller">
     <div class="container bestseller-container">
-      <div class="d-flex align-items-center">
-        <h3 class="section-title p-4">베스트셀러</h3>
+      <div class="d-section">
+        <h3 class="section-title">베스트셀러</h3>
       </div>
       <!-- 
           [과제 안내]
@@ -75,75 +112,76 @@
           <!-- 슬라이드 1 -->
           <div class="carousel-item active">
             <div class="slide">
-              <div class="d-flex flex-column mx-3">
+              <div class="bestseller-item">
                 <img src="./assets/bestsellers/img1.jpeg" class="bestseller-img" alt="book1">
-                <p class="text-center pt-2">소년이 온다</p>
+                <p class="bestseller-title">소년이 온다</p>
               </div>
-              <div class="d-flex flex-column mx-3">
+              <div class="bestseller-item">
                 <img src="./assets/bestsellers/img2.jpeg" class="bestseller-img" alt="book2">
-                <p class="text-center pt-2">채식주의자</p>
+                <p class="bestseller-title">채식주의자</p>
 
               </div>
-              <div class="d-flex flex-column mx-3">
+              <div class="bestseller-item">
                 <img src="./assets/bestsellers/img3.jpeg" class="bestseller-img" alt="book3">
-                <p class="text-center pt-2">대온실 수리 보고서</p>
+                <p class="bestseller-title">대온실 수리 보고서</p>
               </div>
-              <div class="d-flex flex-column mx-3">
+              <div class="bestseller-item">
                 <img src="./assets/bestsellers/img4.jpeg" class="bestseller-img" alt="book4">
-                <p class="text-center pt-2">급류</p>
+                <p class="bestseller-title">급류</p>
               </div>
             </div>
           </div>
           <!-- 슬라이드 2 -->
           <div class="carousel-item">
             <div class="slide">
-              <div class="d-flex flex-column mx-3">
+              <div class="bestseller-item">
                 <img src="./assets/bestsellers/img5.jpeg" class="bestseller-img" alt="book5">
-                <p class="text-center pt-2">시간의 계곡</p>
+                <p class="bestseller-title">시간의 계곡</p>
               </div>
-              <div class="d-flex flex-column mx-3">
+              <div class="bestseller-item">
                 <img src="./assets/bestsellers/img6.jpeg" class="bestseller-img" alt="book6">
-                <p class="text-center pt-2">인간 실격</p>
+                <p class="bestseller-title">인간 실격</p>
 
               </div>
-              <div class="d-flex flex-column mx-3">
+              <div class="bestseller-item">
                 <img src="./assets/bestsellers/img7.jpeg" class="bestseller-img" alt="book7">
-                <p class="text-center pt-2">노르웨이의 숲</p>
+                <p class="bestseller-title">노르웨이의 숲</p>
               </div>
-              <div class="d-flex flex-column mx-3">
+              <div class="bestseller-item">
                 <img src="./assets/bestsellers/img8.jpeg" class="bestseller-img" alt="book8">
-                <p class="text-center pt-2">정원에 대하여</p>
+                <p class="bestseller-title">정원에 대하여</p>
               </div>
             </div>
           </div>
           <!-- 슬라이드 3 -->
           <div class="carousel-item">
             <div class="slide">
-              <div class="d-flex flex-column mx-3">
+              <div class="bestseller-item">
                 <img src="./assets/bestsellers/img9.jpeg" class="bestseller-img" alt="book9">
-                <p class="text-center pt-2">네 칼이 센가, 내 칼이 센가.</p>
+                <p class="bestseller-title">네 칼이 센가, 내 칼이 센가.</p>
               </div>
-              <div class="d-flex flex-column mx-3">
+              <div class="bestseller-item">
                 <img src="./assets/bestsellers/img10.jpeg" class="bestseller-img" alt="book10">
-                <p class="text-center pt-2">새벽의 사원</p>
+                <p class="bestseller-title">새벽의 사원</p>
 
               </div>
-              <div class="d-flex flex-column mx-3">
+              <div class="bestseller-item">
                 <img src="./assets/bestsellers/img11.jpeg" class="bestseller-img" alt="book11">
-                <p class="text-center pt-2">워싱머신</p>
+                <p class="bestseller-title">워싱머신</p>
               </div>
-              <div class="d-flex flex-column mx-3">
+              <div class="bestseller-item">
                 <img src="./assets/bestsellers/img12.jpeg" class="bestseller-img" alt="book12">
-                <p class="text-center pt-2">모순</p>
+                <p class="bestseller-title">모순</p>
               </div>
             </div>
           </div>
-        <!-- 우측 (next) 버튼 -->
-        <button class="carousel-control-next" type="button" data-bs-target="#bestsellerAutoplaying"
-          data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+          <!-- 우측 (next) 버튼 -->
+          <button class="carousel-control-next" type="button" data-bs-target="#bestsellerAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
       </div>
     </div>
   </section>

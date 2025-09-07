@@ -19,6 +19,15 @@
       src: url("assets/fonts/GmarketSansTTFMedium.ttf") format("ttf");
     }
 
+    .font-logo {
+      font-family: "GmarketSansTTFMedium";
+      font-weight: bold;
+    }
+
+    .font-menu {
+      font-family: "SBAggro_L";
+    }
+
     body {
       margin: 0;
       padding: 0;
@@ -38,8 +47,10 @@
       margin: 0;
     }
 
-    .w-80 {
+    .section-align {
       width: 80%;
+      padding: 3rem 0;
+      margin: 0 auto;
     }
 
     span {
@@ -52,7 +63,7 @@
 
 <body>
   <!-- AI 추천 섹션 -->
-  <section class="py-5 w-80 mx-auto">
+  <section class="section-align">
     <div class="ai-recommendation container">
       <!-- 과제 안내:
              1. Bootstrap의 grid 시스템을 활용하여 "AI 추천" 섹션을 구현하세요.

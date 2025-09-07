@@ -19,10 +19,91 @@
       src: url("assets/fonts/GmarketSansTTFMedium.ttf") format("ttf");
     }
 
-    .img-size {
-      display: inline-block;
-      width: 30%;
-      he
+
+    .color-red {
+      color: #fe4a51;
+    }
+
+    .thread {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .popular-thread {
+      text-align: center;
+    }
+
+    .section-title {
+      font-family: "GmarketSansTTFMedium";
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .section-subtitle {
+      font-family: "SBAggro_L";
+      padding-top: 0.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .thread-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      font-family: "SBAggro_L";
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    .card-title {
+      font-size: medium;
+    }
+
+    .img-container img {
+      max-height: 250px;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    .refer {
+      background-color: transparent;
+      border: 0;
+      color: #808080;
+    }
+
+    .item-box {
+      position: relative;
+      box-sizing: border-box;
+      padding: 0.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Flexbox 그리드 컨테이너 (직접 작성할 것) */
+    @media (max-width: 411px) {
+
+      /* 장르 아이템 폭 100%로 지정, 1열로 배치 */
+      .item-box {
+        width: 100%;
+      }
+    }
+
+    @media (min-width: 412px) {
+
+      /* 기본적으로 3열 배치 */
+      .item-box {
+        width: 31%;
+      }
+    }
+
+    .page-link {
+      border: 0;
+      background: transparent;
+      color: black;
+    }
+
+    .page-link:hover {
+      color: #fe4a51;
+      font-family: "GmarketSansTTFMedium";
     }
   </style>
 </head>
@@ -32,10 +113,11 @@
   <section class="thread py-5 bg-light">
     <div class="popular-thread">
       <h3 class="section-title">지금 이 쓰레드</h3>
-      <h3 class="section-subtitle">최근 사람들이 많이 공감한 게시글입니다</h3>
+      <p class="section-subtitle">최근 사람들이 많이 공감한 게시글입니다</p>
     </div>
 
-    <div class="d-flex justify-content-center gap-3">
+    <div class="container thread-container">
+      <!-- <div class="row"> -->
       <!-- 
             [과제 안내]
             아래 영역에 Bootstrap의 card 컴포넌트를 활용하여
@@ -49,43 +131,92 @@
             카드들은 Bootstrap의 grid 시스템을 사용하여 배치합니다.
           -->
       <!-- 코드는 여기에 작성하시오 -->
-      <div class="card border-0 img-size">
-        <div class="ratio ratio-4x3">
-          <img src="assets/threads/img5.jpg" class="card-img-top" alt="...">
+      <div class="card item-box">
+        <div class="img-container">
+          <img src="assets/threads/img1.jpg" class="card-img-top" alt="img">
         </div>
         <div class="card-body">
-          <p>흔들리는 바람 속에서도 멈추지 않는 용기</p>
+          <h5 class="card-title">흔들리는 바람 속에서도 멈추지 않는 용기</h5>
           <p class="card-text">언젠가부터 삶의 무게가 나를 덮어오기 시작했다. 무심코 읽은
             이 책은 그런 내게 용기의 씨앗을 심어주었다. 겉으로는 무심해 보이는 주인공...
           </p>
-          <p>김소민|바람을 걸어가는 아이</p>
+        </div>
+        <div class="card-footer refer">
+          <p>김소민 | <span class="color-red">바람을 걸어가는 아이</span></p>
         </div>
       </div>
 
-      <div class="card border-0 img-size">
-        <div class="ratio ratio-4x3">
-          <img src="assets/threads/img2.jpg" class="card-img-top" alt="...">
+      <div class="card item-box">
+        <div class="img-container">
+          <img src="assets/threads/img2.jpg" class="card-img-top" alt="img">
         </div>
         <div class="card-body">
-          <p>꿈은 언제나 현실이 될 준비를 하고 있다</p>
-          <p class="card-text">내 작은 꿈도 조금씩 성장해 가고 있음을 느끼고, 감사하게 되었다</p>
-          <p>박지후|내 안의 작은 불씨</p>
+          <h5 class="card-title">꿈은 언제나 현실이 될 준비를 하고 있다</h5>
+          <p class="card-text">내 작은 꿈도 조금씩 성장해 가고 있음을 느끼고, 감사하게 되었다
+          </p>
+        </div>
+        <div class="card-footer refer">
+          <p>박지후 | <span class="color-red">내 안의 작은 불씨</span></p>
         </div>
       </div>
 
-      <div class="card border-0 img-size">
-        <div class="ratio ratio-4x3">
-          <img src="assets/threads/img3.jpg" class="card-img-top" alt="...">
+      <div class="card item-box">
+        <div class="img-container">
+          <img src="assets/threads/img3.jpg" class="card-img-top" alt="img">
         </div>
         <div class="card-body">
-          <p>인공지능 문제 해결자로 성장하는 로드맵</p>
+          <h5 class="card-title">인공지능 문제 해결자로 성장하는 로드맵</h5>
           <p class="card-text">기술적인 지식뿐만 아니라 창의적인 문제 해결 접근법과
             꾸준한 학습의 중요성을 강조. 단순한 암기가 아닌, 스스로 사고하고 새로운 해결책을 모색...
           </p>
-          <p>박현우|Mastering AI</p>
+        </div>
+        <div class="card-footer refer">
+          <p>박현우 | <span class="color-red">Mastering AI</span></p>
         </div>
       </div>
 
+      <div class="card item-box">
+        <div class="img-container">
+          <img src="assets/threads/img4.jpg" class="card-img-top" alt="img">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">사소함이 지닌 놀라운 힘</h5>
+          <p class="card-text">작은 행동 하나, 간단한 대화 한 마디가 얼마나 큰 변화를 만들어 낼 수 있는지 깨닫게 해준 것이다.
+          </p>
+        </div>
+        <div class="card-footer refer">
+          <p>이윤서 | <span class="color-red">작은 시작, 큰 기적</span></p>
+        </div>
+      </div>
+
+      <div class="card item-box">
+        <div class="img-container">
+          <img src="assets/threads/img5.jpg" class="card-img-top" alt="img">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">상실의 아픔을 넘어 빛으로</h5>
+          <p class="card-text">'자신을 잃지 않는 법'이 무엇인지 고민하는 사람들에게 큰 위로가 될 책.
+          </p>
+        </div>
+        <div class="card-footer refer">
+          <p>최민정 | <span class="color-red">다시 피어나는 꽃처럼</span></p>
+        </div>
+      </div>
+
+      <div class="card item-box">
+        <div class="img-container">
+          <img src="assets/threads/img6.jpg" class="card-img-top" alt="img">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">아이러니 속에서 피어나는 희망</h5>
+          <p class="card-text">모든 상황이 뒤집히고, 예상이 깨지는 순간들이 이어졌지만 그 속에서 반짝이는
+            희망의 불씨가 있었던 이야기
+          </p>
+        </div>
+        <div class="card-footer refer">
+          <p>정우진 | <span class="color-red">거꾸로 흐르는 강물</span></p>
+        </div>
+      </div>
     </div>
     <!-- Pagination -->
     <nav aria-label="Page navigation">
@@ -98,6 +229,9 @@
             - 활성화된 페이지 번호의 텍스트 색상은 #fe4a51로 설정
           -->
         <!-- 코드는 여기에 작성하시오 -->
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
       </ul>
     </nav>
   </section>

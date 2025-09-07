@@ -9,7 +9,7 @@
 ## 작성한 코드
 
 - `02-bestseller.html`
-- `03-ai-recommendation.html`
+- `03-ai_recommendation.html`
 - `04-genre_list.html`
 
 ![image.png](./img/02.png)

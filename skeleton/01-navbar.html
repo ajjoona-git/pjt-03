@@ -21,12 +21,12 @@
       src: url("assets/fonts/GmarketSansTTFMedium.ttf") format("ttf");
     }
 
-    .font-Gmarket {
+    .font-logo {
       font-family: "GmarketSansTTFMedium";
       font-weight: bold;
     }
 
-    .font-SBA {
+    .font-menu {
       font-family: "SBAggro_L";
     }
 
@@ -35,64 +35,12 @@
       color: #fe4a51;
     }
 
-
-    @media (min-width: 412px) {
-      .navbar-expand-412 {
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-      }
-
-      .navbar-expand-412 .navbar-nav {
-        flex-direction: row;
-      }
-
-      .navbar-expand-412 .navbar-nav .nav-link {
-        padding-right: var(--bs-navbar-nav-link-padding-x);
-        padding-left: var(--bs-navbar-nav-link-padding-x);
-      }
-
-
-      .navbar-expand-412 .navbar-collapse {
-        display: flex !important;
-        flex-basis: auto;
-      }
-
-      .navbar-expand-412 .navbar-toggler {
-        display: none;
-      }
-
-      .expand-412 {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        font-size: 0.5rem;
-      }
-
-      nav {
-        margin: 0px 3rem;
-      }
-    }
-
     .color-red {
       color: #fe4a51;
     }
 
     .color-white {
       color: #fff;
-    }
-
-    @media (max-width: 411.9px) {
-      .expand-412 {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        margin-right: 20px;
-        font-size: 0.7rem;
-      }
-
-      .expand-412>a {
-        padding: 4px 0px;
-      }
     }
 
     /* Hero 섹션 관련 스타일 */
@@ -156,14 +104,62 @@
       font-family: "GmarketSansTTFMedium";
     }
 
-    @media (max-width: 412px) {
+    /* 반응형 미디어 쿼리 */
+    @media (min-width: 412px) {
+      .navbar-expand-412 {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+      }
+
+      .navbar-expand-412 .navbar-nav {
+        flex-direction: row;
+      }
+
+      .navbar-expand-412 .navbar-nav .nav-link {
+        padding-right: var(--bs-navbar-nav-link-padding-x);
+        padding-left: var(--bs-navbar-nav-link-padding-x);
+      }
+
+      .navbar-expand-412 .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto;
+      }
+
+      .navbar-expand-412 .navbar-toggler {
+        display: none;
+      }
+
+      .expand-412 {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        font-size: 0.7rem;
+      }
+
+      nav {
+        margin: 0 3rem;
+      }
+
       .d-412-break {
-        display: block;
+        display: None;
       }
     }
-    @media (min-width: 413px) {
-      .d-412-break{
-        display: None;
+
+    @media (max-width: 411px) {
+      .expand-412 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-right: 20px;
+        font-size: 0.7rem;
+      }
+
+      .expand-412>a {
+        padding: 4px 0;
+      }
+
+      .d-412-break {
+        display: block;
       }
     }
   </style>
@@ -188,7 +184,7 @@
     <div class="hero-overlay">
       <nav class="navbar navbar-expand-412 navbar-dark">
         <div class="container-fluid">
-          <a class="navbar-brand font-Gmarket" href="#">Th<span class="color-red">Read</span></a>
+          <a class="navbar-brand font-logo" href="#">Th<span class="color-red">Read</span></a>
 
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -196,7 +192,7 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ms-auto">
-              <div class="expand-412 font-SBA">
+              <div class="expand-412 font-menu">
                 <a class="nav-link" aria-current="page" href="#">쓰레드</a>
                 <a class="nav-link" href="#">도서 검색</a>
                 <a class="nav-link" href="#">마이 페이지</a>
@@ -211,7 +207,7 @@
       <h1 class="hero-title">
         AI 기반 도서 분석 및<br class="d-412-break"> 창작 지원 통합 솔루션 서비스
       </h1>
-      <div class="hero-subtitle font-Gmarket">Th<span class="color-red">Read</span></div>
+      <div class="hero-subtitle font-logo">Th<span class="color-red">Read</span></div>
     </div>
   </section>
 

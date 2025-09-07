@@ -23,6 +23,8 @@
     .genre-books {
       width: 80%;
       margin: 0 auto;
+      display: flex;
+      flex-direction: column;
     }
 
     .section-title {
@@ -32,25 +34,38 @@
       margin: 0;
     }
 
-    /* Flexbox 그리드 컨테이너 (직접 작성할 것) */
-    @media (max-width: 412px) {
+    .genre-grid {
+      display: flex;
+      flex-wrap: wrap;
+    }
 
+    .item-box {
+      position: relative;
+      box-sizing: border-box;
+      padding: 0.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Flexbox 그리드 컨테이너 (직접 작성할 것) */
+    @media (max-width: 411px) {
       /* 장르 아이템 폭 100%로 지정, 1열로 배치 */
-      .item-width {
-        box-sizing: border-box;
-        padding: 0.2rem;
+      .item-box {
         width: 100%;
       }
     }
 
     @media (min-width: 412px) {
-
       /* 기본적으로 4열 배치 */
-      .item-width {
-        box-sizing: border-box;
-        padding: 0.2rem;
+      .item-box {
         width: 25%;
       }
+    }
+
+    .item-img {
+      border-radius: 5%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .item-title {
@@ -64,7 +79,7 @@
 </head>
 
 <body>
-  <section class="genre-books d-flex flex-column">
+  <section class="genre-books">
     <h3 class="section-title text-center my-4">장르별 도서 목록</h3>
     <!-- 
         [과제 안내]
@@ -73,65 +88,65 @@
         * 화면 폭 412px 이하에서는 1열로 배치되도록 미디어 쿼리가 적용되어야 합니다.
       -->
     <!-- 코드는 여기에 작성하시오 -->
-    <div class="genre-grid d-flex flex-wrap">
-      <div class="position-relative item-width mb-2">
+    <div class="genre-grid">
+      <div class="item-box">
         <div class="ratio ratio-1x1">
-          <img src="./assets/genre/art.jpg" class="rounded w-100 h-100 object-fit-cover" alt="art">
+          <img src="./assets/genre/art.jpg" class="item-img" alt="art">
         </div>
         <p class="item-title">예술</p>
       </div>
-      <div class="position-relative item-width mb-2">
+      <div class="item-box">
         <div class="ratio ratio-1x1">
-          <img src="./assets/genre/baby.jpg" class="rounded w-100 h-100 object-fit-cover" alt="baby">
+          <img src="./assets/genre/baby.jpg" class="item-img" alt="baby">
         </div>
         <p class="item-title">육아</p>
       </div>
-      <div class="position-relative item-width mb-2">
+      <div class="item-box">
         <div class="ratio ratio-1x1">
-          <img src="./assets/genre/economy.jpg" class="rounded w-100 h-100 object-fit-cover" alt="economy">
+          <img src="./assets/genre/economy.jpg" class="item-img" alt="economy">
         </div>
         <p class="item-title">경제</p>
       </div>
-      <div class="position-relative item-width mb-2">
+      <div class="item-box">
         <div class="ratio ratio-1x1">
-          <img src="./assets/genre/health.jpg" class="rounded w-100 h-100 object-fit-cover" alt="health">
+          <img src="./assets/genre/health.jpg" class="item-img" alt="health">
         </div>
         <p class="item-title">건강</p>
       </div>
-      <div class="position-relative item-width mb-2">
+      <div class="item-box">
         <div class="ratio ratio-1x1">
-          <img src="./assets/genre/history.jpg" class="rounded w-100 h-100 object-fit-cover" alt="history">
+          <img src="./assets/genre/history.jpg" class="item-img" alt="history">
         </div>
         <p class="item-title">역사</p>
       </div>
-      <div class="position-relative item-width mb-2">
+      <div class="item-box">
         <div class="ratio ratio-1x1">
-          <img src="./assets/genre/natural_science.jpg" class="rounded w-100 h-100 object-fit-cover"
+          <img src="./assets/genre/natural_science.jpg" class="item-img"
             alt="natural_science">
         </div>
         <p class="item-title">자연과학</p>
       </div>
-      <div class="position-relative item-width mb-2">
+      <div class="item-box">
         <div class="ratio ratio-1x1">
-          <img src="./assets/genre/philosophy.jpg" class="rounded w-100 h-100 object-fit-cover" alt="philosophy">
+          <img src="./assets/genre/philosophy.jpg" class="item-img" alt="philosophy">
         </div>
         <p class="item-title">철학</p>
       </div>
-      <div class="position-relative item-width mb-2">
+      <div class="item-box">
         <div class="ratio ratio-1x1">
-          <img src="./assets/genre/romance.jpg" class="rounded w-100 h-100 object-fit-cover" alt="romance">
+          <img src="./assets/genre/romance.jpg" class="item-img" alt="romance">
         </div>
         <p class="item-title">로맨스</p>
       </div>
-      <div class="position-relative item-width mb-2">
+      <div class="item-box">
         <div class="ratio ratio-1x1">
-          <img src="./assets/genre/travel.jpg" class="rounded w-100 h-100 object-fit-cover" alt="travel">
+          <img src="./assets/genre/travel.jpg" class="item-img" alt="travel">
         </div>
         <p class="item-title">여행</p>
       </div>
-      <div class="position-relative item-width mb-2">
+      <div class="item-box">
         <div class="ratio ratio-1x1">
-          <img src="./assets/genre/youth.jpg" class="rounded w-100 h-100 object-fit-cover" alt="youth">
+          <img src="./assets/genre/youth.jpg" class="item-img" alt="youth">
         </div>
         <p class="item-title">청소년</p>
       </div>
