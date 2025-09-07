@@ -11,12 +11,16 @@
 - `02-bestseller.html`
 - `03-ai_recommendation.html`
 - `04-genre_list.html`
+- `05-popular_thread.html`
+- `06-main.html`
 
-![image.png](./img/02.png)
+![02-bestseller](./img/02.png)
 
-![image.png](./img/03.png)
+![03-ai_recommendation](./img/03.png)
 
-![image.png](./img/04.png)
+![04-genre_list.html](./img/04.png)
+
+![05-popular_thread](./img/05.png)
 
 ## 배운점
 
